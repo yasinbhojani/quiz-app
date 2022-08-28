@@ -9,6 +9,7 @@ const baseURL = "https://opentdb.com/api.php";
 const form = document.querySelector("form");
 const quizContainer = document.querySelector(".quiz-container");
 const resultBtn = document.querySelector("#result-btn");
+const resultContainer = document.querySelector(".result");
 const result = [];
 
 // This function returns a promise which contains the question
@@ -106,6 +107,8 @@ const addOptionEvents = (answers) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  resultContainer.classList.add("display-none");
   const category = document.querySelector("#category").value;
   const difficulty = document.querySelector("#difficulty").value;
   getData(category, difficulty).then((question) => {
@@ -115,7 +118,6 @@ form.addEventListener("submit", (e) => {
     resultBtn.addEventListener("click", () => {
       const resultScore = document.querySelector(".score");
       const resultAns = document.querySelector(".right-ans");
-      const resultContainer = document.querySelector(".result");
       let score = 0;
       for (let el of result) {
         if (el === true) {
