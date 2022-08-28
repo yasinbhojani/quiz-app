@@ -8,6 +8,10 @@
   font-size: 1.2rem;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #f7ecde;
 }
@@ -159,4 +163,31 @@ body {
 
 .result div {
   padding: 5px;
+}
+
+/*! Media Queries */
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 1.1rem;
+  }
+  .form form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form .form-control {
+    margin: unset;
+    margin-bottom: 10px;  
+    width: 90%;
+  }
+  .form .form-control label {
+    font-size: 1.1rem;
+  }
+  .form #start-btn {
+    margin-top: 20px;
+  }
+  .quiz-container {
+    max-width: unset;
+    width: 90%;
+    box-shadow: none;
+  }
 }

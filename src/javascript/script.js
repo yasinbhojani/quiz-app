@@ -136,6 +136,10 @@ form.addEventListener("submit", (e) => {
         ansDiv.innerHTML = `${index + 1}) ${answer}`;
         resultAns.append(ansDiv);
       }
+      // scrolls to result container 
+      resultContainer.scrollIntoView({
+        behavior: 'smooth'
+      });
     });
   });
 });
