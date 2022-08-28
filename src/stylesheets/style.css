@@ -8,11 +8,8 @@
   font-size: 1.2rem;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
+  overflow-x: hidden;
   background-color: #f7ecde;
 }
 
@@ -166,7 +163,7 @@ body {
 }
 
 /*! Media Queries */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   * {
     font-size: 1.1rem;
   }
@@ -189,5 +186,6 @@ body {
     max-width: unset;
     width: 90%;
     box-shadow: none;
+    padding: 20px 0;
   }
 }
